@@ -30,9 +30,16 @@ extension GKEntity {
         return component
     }
     
-    var followComponent: FollowComponent {
-        guard let component = self.component(ofType: FollowComponent.self) else {
-            fatalError("\(FollowComponent.self) was not found is \(self)")
+    var humanComponent: HumanComponent {
+        guard let component = self.component(ofType: HumanComponent.self) else {
+            fatalError("\(HumanComponent.self) was not found is \(self)")
+        }
+        return component
+    }
+    
+    var followComponent: ZombieComponent {
+        guard let component = self.component(ofType: ZombieComponent.self) else {
+            fatalError("\(ZombieComponent.self) was not found is \(self)")
         }
         return component
     }

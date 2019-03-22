@@ -8,4 +8,4 @@
 import UIKit
 import PlaygroundSupport
 
-PlaygroundPage.current.liveView = instantiateLiveView(.second)
+PlaygroundPage.current.liveView = instantiateLiveView(.two)

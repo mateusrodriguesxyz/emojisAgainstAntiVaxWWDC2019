@@ -17,15 +17,11 @@ public class FirstScene: SKScene {
     private var filledRange = [PointRange]()
     
     override public init(size: CGSize) {
-        
         super.init(size: size)
-        
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        
         entityManager = EntityManager(scene: self)
-        
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
-        
+        self.physicsBody?.collisionBitMask = CategoryMask.human.rawValue
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,13 +29,9 @@ public class FirstScene: SKScene {
     }
     
     override public func didMove(to view: SKView) {
-        
         backgroundColor = UIColor.white
-        
         physicsWorld.contactDelegate = self
-        
-        createEmojis(15)
-        
+        createEmojis(10)
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -62,17 +54,16 @@ public class FirstScene: SKScene {
         var people = [Person]()
         for i in 0 ... total {
             let person = Person(entityManager: entityManager, name: "smile\(i)", gender: .male, emoji: "🙂")
+            person.humanComponent.wander = true
             people.append(person)
             entityManager.add(person)
         }
-        setValidSpritePosition(entities: people, offset: 50, initialRanges: filledRange)
+        setValidSpritePosition(entities: people, offset: 100, initialRanges: filledRange)
     }
     
     private func setValidSpritePosition(entities: [GKEntity], offset: CGFloat, initialRanges: [PointRange]) {
         
-        if scene!.frame.width == 0 {
-            return
-        }
+        if scene!.frame.width == 0 { return }
         
         var lastPosition: CGPoint = .zero
         var ranges = initialRanges
@@ -89,8 +80,8 @@ public class FirstScene: SKScene {
             node.position = position
             lastPosition = node.position
             ranges.append(spriteComponent.getPointRange(offset: offset))
-            
         }
+        
         filledRange = ranges
     }
     
@@ -110,7 +101,6 @@ extension FirstScene: SKPhysicsContactDelegate {
     public func didBegin(_ contact: SKPhysicsContact) {
         
     }
-    
     
 }
 

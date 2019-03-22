@@ -28,13 +28,9 @@ public class SecondScene: SKScene {
     private var filledRange = [PointRange]()
     
     override public init(size: CGSize) {
-        
         super.init(size: size)
-        
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
-
         addChild(logLabel)
-        
         entityManager = EntityManager(scene: self)
         
         self.people = [Person(entityManager: entityManager, name: "cibele", gender: .female, emoji: "🧑🏽"),
@@ -52,27 +48,20 @@ public class SecondScene: SKScene {
     }
     
     override public func didMove(to view: SKView) {
-        
         backgroundColor = UIColor.white
-        
         physicsWorld.contactDelegate = self
-        
         people.enumerated().forEach { (i, person) in
             if i == 1 {
                 person.infect()
             }
             entityManager.add(person)
         }
-        
         setValidSpritePosition(entities: people, offset: 100, initialRanges: filledRange)
-        
     }
     
     private func setValidSpritePosition(entities: [GKEntity], offset: CGFloat, initialRanges: [PointRange]) {
         
-        if scene!.frame.width == 0 {
-            return
-        }
+        if scene!.frame.width == 0 { return }
         
         var lastPosition: CGPoint = .zero
         var ranges = initialRanges
@@ -109,7 +98,7 @@ public class SecondScene: SKScene {
         }
         let node = self.atPoint(location)
         if let person = node.entity as? Person {
-            person.vacinate()
+            person.vacinate(animate: false, circle: true)
         }
     }
     
@@ -156,7 +145,7 @@ extension SecondScene: SKPhysicsContactDelegate {
         } else {
             if !human.wasTouched {
                 human.wasTouched = true
-                FollowComponent.vacinatedPeople.insert(human)
+                ZombieComponent.vacinatedPeople.insert(human)
                 createBalloon(for: human.spriteComponent.node)
             }
         }

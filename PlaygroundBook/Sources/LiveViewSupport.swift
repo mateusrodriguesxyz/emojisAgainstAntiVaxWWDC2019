@@ -16,10 +16,14 @@ public func instantiateLiveView(_ controller: Controller) -> PlaygroundLiveViewa
     var liveView: PlaygroundLiveViewable
     
     switch controller {
-        case .first:
-            liveView = FirstViewController()
-        case .second:
-            liveView = SecondViewController()
+        case .one:
+            liveView = PageOneViewController()
+        case .two:
+            liveView = PageTwoViewController()
+        case .three:
+            liveView = PageThreeViewController()
+        case .four:
+            liveView = PageFourViewController()
     }
     
     return liveView

@@ -8,6 +8,8 @@
 import Foundation
 
 public enum Controller {
-    case first
-    case second
+    case one
+    case two
+    case three
+    case four
 }

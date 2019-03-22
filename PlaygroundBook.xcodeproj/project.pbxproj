@@ -17,19 +17,19 @@
 		5EA2E3DB2056F8D100416A35 /* PlaygroundSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA2E3D72056F88700416A35 /* PlaygroundSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5EBEC2F0205B399300975D3F /* LiveViewHost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBEC2EF205B396500975D3F /* LiveViewHost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2F97E2054B6E400191409 /* ManifestPlist.strings */; };
-		5EF2F9AE2054BBF300191409 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9AD2054BBF300191409 /* SecondViewController.swift */; };
+		5EF2F9AE2054BBF300191409 /* PageFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9AD2054BBF300191409 /* PageFourViewController.swift */; };
 		5EF2F9B72054E6FB00191409 /* Chapters in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5EF2F9B62054E6F900191409 /* Chapters */; };
 		5EF2F9B82054E6FE00191409 /* Sources in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5EF2F9A52054BBB200191409 /* Sources */; };
 		DC3C34D5224119F600DCC8B7 /* GKEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34D4224119F600DCC8B7 /* GKEntity+Extension.swift */; };
 		DC3C34D722411A4200DCC8B7 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34D622411A4200DCC8B7 /* CGPoint+Extension.swift */; };
 		DC3C34D922411A5700DCC8B7 /* float2+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34D822411A5700DCC8B7 /* float2+Extension.swift */; };
-		DC3C34DB22411AA900DCC8B7 /* FollowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34DA22411AA900DCC8B7 /* FollowComponent.swift */; };
+		DC3C34DB22411AA900DCC8B7 /* ZombieComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34DA22411AA900DCC8B7 /* ZombieComponent.swift */; };
 		DC3C34DD22411ACE00DCC8B7 /* PhysicsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34DC22411ACE00DCC8B7 /* PhysicsComponent.swift */; };
 		DC3C34DF22411AE200DCC8B7 /* CircleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34DE22411AE200DCC8B7 /* CircleComponent.swift */; };
 		DC3C34E122411B2800DCC8B7 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34E022411B2800DCC8B7 /* EntityManager.swift */; };
 		DC3C34E222411C3300DCC8B7 /* GKEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34D4224119F600DCC8B7 /* GKEntity+Extension.swift */; };
 		DC3C34E522411EC700DCC8B7 /* CircleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34DE22411AE200DCC8B7 /* CircleComponent.swift */; };
-		DC3C34E622411ECE00DCC8B7 /* FollowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34DA22411AA900DCC8B7 /* FollowComponent.swift */; };
+		DC3C34E622411ECE00DCC8B7 /* ZombieComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34DA22411AA900DCC8B7 /* ZombieComponent.swift */; };
 		DC3C34E722411EFC00DCC8B7 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34E022411B2800DCC8B7 /* EntityManager.swift */; };
 		DC3C34E822411F0F00DCC8B7 /* PhysicsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34DC22411ACE00DCC8B7 /* PhysicsComponent.swift */; };
 		DC3C34ED2242897000DCC8B7 /* CategoryMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C34EC2242897000DCC8B7 /* CategoryMask.swift */; };
@@ -56,9 +56,8 @@
 		DC3C35162243B9D500DCC8B7 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C35142243B9D500DCC8B7 /* cover.png */; };
 		DC3C351B2243C2D700DCC8B7 /* speak.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C351A2243C2D700DCC8B7 /* speak.png */; };
 		DC3C351C2243C2D700DCC8B7 /* speak.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C351A2243C2D700DCC8B7 /* speak.png */; };
-		DC3C35222243C5A200DCC8B7 /* FirstScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C35212243C5A200DCC8B7 /* FirstScene.swift */; };
 		DC3C35242243F2A800DCC8B7 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C35232243F2A800DCC8B7 /* Controller.swift */; };
-		DC3C35252243F41D00DCC8B7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C351F2243C55400DCC8B7 /* FirstViewController.swift */; };
+		DC3C35252243F41D00DCC8B7 /* PageThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C351F2243C55400DCC8B7 /* PageThreeViewController.swift */; };
 		DC3C35262243F47800DCC8B7 /* FirstScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C35212243C5A200DCC8B7 /* FirstScene.swift */; };
 		DC3C352B2244175F00DCC8B7 /* 🤢.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C35272244175E00DCC8B7 /* 🤢.png */; };
 		DC3C352C2244175F00DCC8B7 /* 🤢.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C35272244175E00DCC8B7 /* 🤢.png */; };
@@ -70,14 +69,19 @@
 		DC3C35322244175F00DCC8B7 /* 🙂.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C352A2244175E00DCC8B7 /* 🙂.png */; };
 		DC3C35342244189C00DCC8B7 /* 😀.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C35332244189C00DCC8B7 /* 😀.png */; };
 		DC3C35352244189C00DCC8B7 /* 😀.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C35332244189C00DCC8B7 /* 😀.png */; };
+		DC3C353722442AC300DCC8B7 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C353622442AC300DCC8B7 /* Reaction.swift */; };
+		DC3C353822442B2600DCC8B7 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C353622442AC300DCC8B7 /* Reaction.swift */; };
+		DC3C353A2245025900DCC8B7 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C35392245025900DCC8B7 /* ThirdViewController.swift */; };
+		DC3C353C2245034400DCC8B7 /* PageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C353B2245034400DCC8B7 /* PageOneViewController.swift */; };
+		DC3C353E224503B200DCC8B7 /* PageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C353D224503B200DCC8B7 /* PageTwoViewController.swift */; };
 		DC647252223BF26C000DC29C /* LiveView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */; };
 		DCEF48DF223D624B00ADDE77 /* SecondScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48DE223D624B00ADDE77 /* SecondScene.swift */; };
 		DCEF48E5223D642800ADDE77 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48E4223D642800ADDE77 /* Person.swift */; };
 		DCEF48E6223D642800ADDE77 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48E4223D642800ADDE77 /* Person.swift */; };
 		DCEF48E9223D64A900ADDE77 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48E8223D64A900ADDE77 /* SpriteComponent.swift */; };
 		DCEF48EA223D661F00ADDE77 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48E8223D64A900ADDE77 /* SpriteComponent.swift */; };
-		DCEF48EC223D691900ADDE77 /* MovementComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48EB223D691900ADDE77 /* MovementComponent.swift */; };
-		DCEF48ED223D6A4B00ADDE77 /* MovementComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48EB223D691900ADDE77 /* MovementComponent.swift */; };
+		DCEF48EC223D691900ADDE77 /* HumanComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48EB223D691900ADDE77 /* HumanComponent.swift */; };
+		DCEF48ED223D6A4B00ADDE77 /* HumanComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48EB223D691900ADDE77 /* HumanComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -167,12 +171,12 @@
 		5EF2F97D2054B6E400191409 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ManifestPlist.strings; sourceTree = "<group>"; };
 		5EF2F9A52054BBB200191409 /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
 		5EF2F9AB2054BBF300191409 /* libBook_Sources.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBook_Sources.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EF2F9AD2054BBF300191409 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5EF2F9AD2054BBF300191409 /* PageFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageFourViewController.swift; sourceTree = "<group>"; };
 		5EF2F9B62054E6F900191409 /* Chapters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chapters; sourceTree = "<group>"; };
 		DC3C34D4224119F600DCC8B7 /* GKEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKEntity+Extension.swift"; sourceTree = "<group>"; };
 		DC3C34D622411A4200DCC8B7 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		DC3C34D822411A5700DCC8B7 /* float2+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "float2+Extension.swift"; sourceTree = "<group>"; };
-		DC3C34DA22411AA900DCC8B7 /* FollowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowComponent.swift; sourceTree = "<group>"; };
+		DC3C34DA22411AA900DCC8B7 /* ZombieComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZombieComponent.swift; sourceTree = "<group>"; };
 		DC3C34DC22411ACE00DCC8B7 /* PhysicsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsComponent.swift; sourceTree = "<group>"; };
 		DC3C34DE22411AE200DCC8B7 /* CircleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleComponent.swift; sourceTree = "<group>"; };
 		DC3C34E022411B2800DCC8B7 /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
@@ -188,7 +192,7 @@
 		DC3C34FB2242DFFB00DCC8B7 /* 🧑🏽.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "🧑🏽.png"; sourceTree = "<group>"; };
 		DC3C35142243B9D500DCC8B7 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
 		DC3C351A2243C2D700DCC8B7 /* speak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speak.png; sourceTree = "<group>"; };
-		DC3C351F2243C55400DCC8B7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		DC3C351F2243C55400DCC8B7 /* PageThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageThreeViewController.swift; sourceTree = "<group>"; };
 		DC3C35212243C5A200DCC8B7 /* FirstScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScene.swift; sourceTree = "<group>"; };
 		DC3C35232243F2A800DCC8B7 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DC3C35272244175E00DCC8B7 /* 🤢.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "🤢.png"; sourceTree = "<group>"; };
@@ -196,10 +200,14 @@
 		DC3C35292244175E00DCC8B7 /* 😢.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "😢.png"; sourceTree = "<group>"; };
 		DC3C352A2244175E00DCC8B7 /* 🙂.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "🙂.png"; sourceTree = "<group>"; };
 		DC3C35332244189C00DCC8B7 /* 😀.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "😀.png"; sourceTree = "<group>"; };
+		DC3C353622442AC300DCC8B7 /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
+		DC3C35392245025900DCC8B7 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		DC3C353B2245034400DCC8B7 /* PageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOneViewController.swift; sourceTree = "<group>"; };
+		DC3C353D224503B200DCC8B7 /* PageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoViewController.swift; sourceTree = "<group>"; };
 		DCEF48DE223D624B00ADDE77 /* SecondScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScene.swift; sourceTree = "<group>"; };
 		DCEF48E4223D642800ADDE77 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		DCEF48E8223D64A900ADDE77 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
-		DCEF48EB223D691900ADDE77 /* MovementComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementComponent.swift; sourceTree = "<group>"; };
+		DCEF48EB223D691900ADDE77 /* HumanComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +375,7 @@
 				DC3C34D622411A4200DCC8B7 /* CGPoint+Extension.swift */,
 				DC3C34D822411A5700DCC8B7 /* float2+Extension.swift */,
 				DC3C34EF2242C9C700DCC8B7 /* PointRange.swift */,
+				DC3C353622442AC300DCC8B7 /* Reaction.swift */,
 			);
 			path = Helpes;
 			sourceTree = "<group>";
@@ -406,8 +415,11 @@
 			isa = PBXGroup;
 			children = (
 				DC3C35232243F2A800DCC8B7 /* Controller.swift */,
-				DC3C351F2243C55400DCC8B7 /* FirstViewController.swift */,
-				5EF2F9AD2054BBF300191409 /* SecondViewController.swift */,
+				DC3C353B2245034400DCC8B7 /* PageOneViewController.swift */,
+				DC3C353D224503B200DCC8B7 /* PageTwoViewController.swift */,
+				DC3C351F2243C55400DCC8B7 /* PageThreeViewController.swift */,
+				5EF2F9AD2054BBF300191409 /* PageFourViewController.swift */,
+				DC3C35392245025900DCC8B7 /* ThirdViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -425,8 +437,8 @@
 			children = (
 				DCEF48E8223D64A900ADDE77 /* SpriteComponent.swift */,
 				DC3C34DC22411ACE00DCC8B7 /* PhysicsComponent.swift */,
-				DCEF48EB223D691900ADDE77 /* MovementComponent.swift */,
-				DC3C34DA22411AA900DCC8B7 /* FollowComponent.swift */,
+				DCEF48EB223D691900ADDE77 /* HumanComponent.swift */,
+				DC3C34DA22411AA900DCC8B7 /* ZombieComponent.swift */,
 				DC3C34DE22411AE200DCC8B7 /* CircleComponent.swift */,
 			);
 			path = Components;
@@ -611,14 +623,14 @@
 				DC3C34E222411C3300DCC8B7 /* GKEntity+Extension.swift in Sources */,
 				DC3C34E522411EC700DCC8B7 /* CircleComponent.swift in Sources */,
 				DC3C34F12242CAB300DCC8B7 /* PointRange.swift in Sources */,
-				DCEF48ED223D6A4B00ADDE77 /* MovementComponent.swift in Sources */,
+				DCEF48ED223D6A4B00ADDE77 /* HumanComponent.swift in Sources */,
 				5EA2E3C02056F35A00416A35 /* AppDelegate.swift in Sources */,
 				DC3C34E822411F0F00DCC8B7 /* PhysicsComponent.swift in Sources */,
 				DCEF48EA223D661F00ADDE77 /* SpriteComponent.swift in Sources */,
-				DC3C35222243C5A200DCC8B7 /* FirstScene.swift in Sources */,
-				DC3C34E622411ECE00DCC8B7 /* FollowComponent.swift in Sources */,
+				DC3C34E622411ECE00DCC8B7 /* ZombieComponent.swift in Sources */,
 				DC3C34E722411EFC00DCC8B7 /* EntityManager.swift in Sources */,
 				DCEF48E6223D642800ADDE77 /* Person.swift in Sources */,
+				DC3C353722442AC300DCC8B7 /* Reaction.swift in Sources */,
 				DC3C34EE224293CD00DCC8B7 /* CategoryMask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,21 +641,25 @@
 			files = (
 				DC3C34D5224119F600DCC8B7 /* GKEntity+Extension.swift in Sources */,
 				DC3C35262243F47800DCC8B7 /* FirstScene.swift in Sources */,
+				DC3C353E224503B200DCC8B7 /* PageTwoViewController.swift in Sources */,
+				DC3C353A2245025900DCC8B7 /* ThirdViewController.swift in Sources */,
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
-				DC3C34DB22411AA900DCC8B7 /* FollowComponent.swift in Sources */,
+				DC3C34DB22411AA900DCC8B7 /* ZombieComponent.swift in Sources */,
 				DCEF48E9223D64A900ADDE77 /* SpriteComponent.swift in Sources */,
 				DCEF48E5223D642800ADDE77 /* Person.swift in Sources */,
+				DC3C353822442B2600DCC8B7 /* Reaction.swift in Sources */,
 				DC3C34F02242C9C700DCC8B7 /* PointRange.swift in Sources */,
+				DC3C353C2245034400DCC8B7 /* PageOneViewController.swift in Sources */,
 				DC3C34DF22411AE200DCC8B7 /* CircleComponent.swift in Sources */,
 				DCEF48DF223D624B00ADDE77 /* SecondScene.swift in Sources */,
 				DC3C34E122411B2800DCC8B7 /* EntityManager.swift in Sources */,
-				DC3C35252243F41D00DCC8B7 /* FirstViewController.swift in Sources */,
+				DC3C35252243F41D00DCC8B7 /* PageThreeViewController.swift in Sources */,
 				DC3C34DD22411ACE00DCC8B7 /* PhysicsComponent.swift in Sources */,
 				DC3C34ED2242897000DCC8B7 /* CategoryMask.swift in Sources */,
-				DCEF48EC223D691900ADDE77 /* MovementComponent.swift in Sources */,
+				DCEF48EC223D691900ADDE77 /* HumanComponent.swift in Sources */,
 				DC3C34D922411A5700DCC8B7 /* float2+Extension.swift in Sources */,
 				DC3C34D722411A4200DCC8B7 /* CGPoint+Extension.swift in Sources */,
-				5EF2F9AE2054BBF300191409 /* SecondViewController.swift in Sources */,
+				5EF2F9AE2054BBF300191409 /* PageFourViewController.swift in Sources */,
 				DC3C35242243F2A800DCC8B7 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

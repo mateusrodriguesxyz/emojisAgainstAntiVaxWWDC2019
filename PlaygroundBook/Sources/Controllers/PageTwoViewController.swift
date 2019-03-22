@@ -1,8 +1,15 @@
+//
+//  PageTwoViewController.swift
+//  Book_Sources
+//
+//  Created by Mateus Rodrigues on 22/03/19.
+//
+
 import UIKit
 import SpriteKit
 import PlaygroundSupport
 
-public class FirstViewController: UIViewController {
+public class PageTwoViewController: UIViewController {
     
     public var spriteScene: FirstScene?
     
@@ -16,7 +23,6 @@ public class FirstViewController: UIViewController {
         spriteScene?.scaleMode = .resizeFill
         let skView = SKView(frame: CGRect(origin: CGPoint.zero, size: view.bounds.size))
         skView.isUserInteractionEnabled = true
-        skView.backgroundColor = UIColor.red
         skView.presentScene(spriteScene)
         
         skView.showsPhysics = true
@@ -26,9 +32,8 @@ public class FirstViewController: UIViewController {
     
 }
 
-extension FirstViewController: PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer  {
+extension PageTwoViewController: PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer  {
     public func receive(_ message: PlaygroundValue) {
         
     }
 }
-

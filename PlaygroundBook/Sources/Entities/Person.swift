@@ -33,7 +33,7 @@ public class Person: GKEntity {
         self.gender = gender
         super.init()
         self.addComponent(SpriteComponent(imageNamed: emoji))
-        self.addComponent(MovementComponent())
+        self.addComponent(HumanComponent())
         self.addComponent(PhysicsComponent(for: spriteComponent.node))
         
     }
@@ -51,8 +51,8 @@ public class Person: GKEntity {
             body.categoryBitMask = CategoryMask.zombie.rawValue
             body.collisionBitMask = CategoryMask.human.rawValue | CategoryMask.zombie.rawValue
             body.contactTestBitMask = CategoryMask.human.rawValue
-            removeComponent(ofType: MovementComponent.self)
-            addComponent(FollowComponent(entityManager: entityManager!))
+            removeComponent(ofType: HumanComponent.self)
+            addComponent(ZombieComponent(entityManager: entityManager!))
         }
     }
     
@@ -69,12 +69,25 @@ public class Person: GKEntity {
                 spriteComponent.node.addChild(circleComponent.node)
             }
             if animate {
-                let option = Bool.random()
-                let emoji = option ? "🤢" : "😢"
-                let sick = SKAction.setTexture(SKTexture(imageNamed: emoji))
-                let wait = SKAction.wait(forDuration: 2.0)
-                let health = SKAction.setTexture(SKTexture(imageNamed: "😀"))
-                spriteComponent.node.run(SKAction.sequence([sick, wait, health]))
+                let reaction = Reaction.random()
+                
+                var action: SKAction
+                
+                switch reaction {
+                case .health:
+                    let health = SKAction.setTexture(reaction.emoji())
+                    action = health
+                case .cry, .sick:
+                    let reaction = SKAction.setTexture(reaction.emoji())
+                    let wait = SKAction.wait(forDuration: 2.0)
+                    let health = SKAction.setTexture(Reaction.health.emoji())
+                    action = SKAction.sequence([reaction, wait, health])
+                    
+                }
+                
+                spriteComponent.node.run(action) {
+                    self.humanComponent.wander = false
+                }
             }
         }
     }

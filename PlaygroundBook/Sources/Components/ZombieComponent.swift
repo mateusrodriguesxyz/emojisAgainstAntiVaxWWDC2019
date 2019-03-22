@@ -7,9 +7,9 @@
 
 import GameplayKit
 
-public class FollowComponent: GKAgent2D, GKAgentDelegate {
+public class ZombieComponent: GKAgent2D, GKAgentDelegate {
     
-    static var beingFollow = Set<MovementComponent>()
+    static var beingFollow = Set<HumanComponent>()
     
     static var vacinatedPeople = Set<GKEntity>()
     
@@ -30,29 +30,29 @@ public class FollowComponent: GKAgent2D, GKAgentDelegate {
     
     
     public func agentWillUpdate(_ agent: GKAgent) {
-        guard let spriteNode = entity?.component(ofType: SpriteComponent.self)?.node else {
-            fatalError("Agent has no SpriteComponent.")
+        guard let node = entity?.spriteComponent.node else {
+            return
         }
-        self.position = vector_float2(point: spriteNode.position)
+        self.position = vector_float2(point: node.position)
     }
     
     public func agentDidUpdate(_ agent: GKAgent) {
-        guard let spriteNode = entity?.component(ofType: SpriteComponent.self)?.node else {
-            fatalError("Agent has no SpriteComponent.")
+        guard let node = entity?.spriteComponent.node else {
+            return
         }
-        spriteNode.position = CGPoint(vector: position)
+        node.position = CGPoint(vector: position)
     }
     
     func closestMoveComponent() -> GKAgent2D? {
         
-        var closestMoveComponent: MovementComponent? = nil
+        var closestMoveComponent: HumanComponent? = nil
         var closestDistance = CGFloat(0)
         
-        let movementComponents = entityManager.getComponents(type: MovementComponent.self)
+        let movementComponents = entityManager.getComponents(type: HumanComponent.self)
         
         let targets = movementComponents.filter { (component) -> Bool in
             let person = component.entity as! Person
-            return FollowComponent.vacinatedPeople.contains(person) ? false : true
+            return ZombieComponent.vacinatedPeople.contains(person) ? false : true
         }
         
         for component in targets {
@@ -69,7 +69,7 @@ public class FollowComponent: GKAgent2D, GKAgentDelegate {
     public override func update(deltaTime seconds: TimeInterval) {
         super.update(deltaTime: seconds)
         
-        guard let target = closestMoveComponent() as? MovementComponent else {
+        guard let target = closestMoveComponent() as? HumanComponent else {
             let wander = GKGoal(toWander: 10)
             let stop = GKGoal(toReachTargetSpeed: 0)
             self.behavior = GKBehavior(goals: [wander, stop], andWeights: [100, 1])

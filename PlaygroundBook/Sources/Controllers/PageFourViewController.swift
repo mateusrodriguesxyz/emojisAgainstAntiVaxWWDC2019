@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import PlaygroundSupport
 
-public class SecondViewController: UIViewController {
+public class PageFourViewController: UIViewController {
     
     public let resultLabel: UILabel = {
         let label = UILabel()
@@ -42,7 +42,7 @@ public class SecondViewController: UIViewController {
     
 }
 
-extension SecondViewController: PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer  {
+extension PageFourViewController: PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer  {
     public func receive(_ message: PlaygroundValue) {
         
         guard let scene = spriteScene else { return }
