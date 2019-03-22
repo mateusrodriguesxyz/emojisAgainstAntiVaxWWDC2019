@@ -11,7 +11,7 @@ import PlaygroundSupport
 
 public class PageTwoViewController: UIViewController {
     
-    public var spriteScene: FirstScene?
+    public var spriteScene: SceneTwo?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ public class PageTwoViewController: UIViewController {
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        spriteScene = FirstScene(size: view.bounds.size)
+        spriteScene = SceneTwo(size: view.bounds.size)
         spriteScene?.scaleMode = .resizeFill
         let skView = SKView(frame: CGRect(origin: CGPoint.zero, size: view.bounds.size))
         skView.isUserInteractionEnabled = true

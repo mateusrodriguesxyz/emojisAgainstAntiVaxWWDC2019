@@ -8,11 +8,6 @@
 import Foundation
 import GameplayKit
 
-enum Gender {
-    case male
-    case female
-}
-
 public class Person: GKEntity {
     
     weak var entityManager: EntityManager?
@@ -79,7 +74,7 @@ public class Person: GKEntity {
                     action = health
                 case .cry, .sick:
                     let reaction = SKAction.setTexture(reaction.emoji())
-                    let wait = SKAction.wait(forDuration: 2.0)
+                    let wait = SKAction.wait(forDuration: 1.0)
                     let health = SKAction.setTexture(Reaction.health.emoji())
                     action = SKAction.sequence([reaction, wait, health])
                     

@@ -22,7 +22,9 @@ public class EntityManager {
         entities.insert(entity)
         
         if let node = entity.component(ofType: SpriteComponent.self)?.node {
+            node.alpha = 0.0
             scene.addChild(node)
+            node.run(SKAction.fadeIn(withDuration: 0.5))
         }
         
     }
@@ -38,7 +40,9 @@ public class EntityManager {
             return
         }
         
-        node.removeFromParent()
+        node.run(SKAction.fadeOut(withDuration: 0.5)) {
+            node.removeFromParent()
+        }
         
         entities.remove(entity)
     }

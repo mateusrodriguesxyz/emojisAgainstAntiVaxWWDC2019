@@ -8,7 +8,7 @@
 import SpriteKit
 import GameplayKit
 
-public class SecondScene: SKScene {
+public class SceneFour: SKScene {
     
     private var entityManager: EntityManager!
     
@@ -120,7 +120,7 @@ public class SecondScene: SKScene {
     
 }
 
-extension SecondScene: SKPhysicsContactDelegate {
+extension SceneFour: SKPhysicsContactDelegate {
     
     public func didBegin(_ contact: SKPhysicsContact) {
         

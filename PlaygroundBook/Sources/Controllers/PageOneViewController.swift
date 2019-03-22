@@ -11,7 +11,7 @@ import PlaygroundSupport
 
 public class PageOneViewController: UIViewController {
     
-    public var spriteScene: FirstScene?
+    public var spriteScene: SceneOne?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ public class PageOneViewController: UIViewController {
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        spriteScene = FirstScene(size: view.bounds.size)
+        spriteScene = SceneOne(size: view.bounds.size)
         spriteScene?.scaleMode = .resizeFill
         let skView = SKView(frame: CGRect(origin: CGPoint.zero, size: view.bounds.size))
         skView.isUserInteractionEnabled = true

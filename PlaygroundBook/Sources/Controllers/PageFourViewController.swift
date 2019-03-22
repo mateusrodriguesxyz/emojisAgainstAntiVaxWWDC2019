@@ -19,7 +19,7 @@ public class PageFourViewController: UIViewController {
         return label
     }()
     
-    public var spriteScene: SecondScene?
+    public var spriteScene: SceneFour?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ public class PageFourViewController: UIViewController {
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        spriteScene = SecondScene(size: view.bounds.size)
+        spriteScene = SceneFour(size: view.bounds.size)
         spriteScene?.scaleMode = .resizeFill
         let skView = SKView(frame: CGRect(origin: CGPoint.zero, size: view.bounds.size))
         skView.isUserInteractionEnabled = true

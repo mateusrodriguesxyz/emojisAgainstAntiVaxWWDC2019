@@ -4,7 +4,7 @@ import PlaygroundSupport
 
 public class PageThreeViewController: UIViewController {
     
-    public var spriteScene: FirstScene?
+    public var spriteScene: SceneThree?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,7 +12,7 @@ public class PageThreeViewController: UIViewController {
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        spriteScene = FirstScene(size: view.bounds.size)
+        spriteScene = SceneThree(size: view.bounds.size)
         spriteScene?.scaleMode = .resizeFill
         let skView = SKView(frame: CGRect(origin: CGPoint.zero, size: view.bounds.size))
         skView.isUserInteractionEnabled = true

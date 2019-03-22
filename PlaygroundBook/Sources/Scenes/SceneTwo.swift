@@ -1,14 +1,14 @@
 //
-//  FirstScene.swift
-//  LiveViewTestApp
+//  SceneTwo.swift
+//  Book_Sources
 //
-//  Created by Mateus Rodrigues on 21/03/19.
+//  Created by Mateus Rodrigues on 22/03/19.
 //
 
 import SpriteKit
 import GameplayKit
 
-public class FirstScene: SKScene {
+public class SceneTwo: SKScene {
     
     private var entityManager: EntityManager!
     
@@ -31,7 +31,12 @@ public class FirstScene: SKScene {
     override public func didMove(to view: SKView) {
         backgroundColor = UIColor.white
         physicsWorld.contactDelegate = self
-        createEmojis(10)
+        
+        let virus = Virus(entityManager: entityManager)
+        virus.spriteComponent.node.position = CGPoint.zero
+        entityManager.add(virus)
+
+        
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -39,26 +44,28 @@ public class FirstScene: SKScene {
             return
         }
         let node = self.atPoint(location)
-        if let person = node.entity as? Person {
-            person.vacinate(animate: true, circle: false)
+        if let virus = node.entity as? Virus {
+            produceAntibodies(for: virus)
         }
+    }
+    
+    func produceAntibodies(for virus: Virus) {
+        let virusNode = virus.spriteComponent.node
+        let antibody1 = Antibody(entityManager: entityManager, at: virusNode.position.move(200, .up))
+        let antibody2 = Antibody(entityManager: entityManager, at: virusNode.position.move(200, .down))
+        let antibody3 = Antibody(entityManager: entityManager, at: virusNode.position.move(200, .left))
+        let antibody4 = Antibody(entityManager: entityManager, at: virusNode.position.move(200, .right))
+        entityManager.add(antibody1)
+        entityManager.add(antibody2)
+        entityManager.add(antibody3)
+        entityManager.add(antibody4)
+        
     }
     
     override public func update(_ currentTime: TimeInterval) {
         let deltaTime = currentTime - lastUpdateTimeInterval
         lastUpdateTimeInterval = currentTime
         entityManager.update(deltaTime)
-    }
-    
-    func createEmojis(_ total: Int) {
-        var people = [Person]()
-        for i in 0 ... total {
-            let person = Person(entityManager: entityManager, name: "smile\(i)", gender: .male, emoji: "🙂")
-            person.humanComponent.wander = true
-            people.append(person)
-            entityManager.add(person)
-        }
-        setValidSpritePosition(entities: people, offset: 100, initialRanges: filledRange)
     }
     
     private func setValidSpritePosition(entities: [GKEntity], offset: CGFloat, initialRanges: [PointRange]) {
@@ -96,11 +103,20 @@ public class FirstScene: SKScene {
     
 }
 
-extension FirstScene: SKPhysicsContactDelegate {
+extension SceneTwo: SKPhysicsContactDelegate {
     
     public func didBegin(_ contact: SKPhysicsContact) {
+        
+        if let virus = contact.bodyA.node?.entity as? Virus {
+            entityManager.remove(virus)
+            return
+        }
+        
+        if let virus = contact.bodyB.node?.entity as? Virus {
+            entityManager.remove(virus)
+            return
+        }
         
     }
     
 }
-
