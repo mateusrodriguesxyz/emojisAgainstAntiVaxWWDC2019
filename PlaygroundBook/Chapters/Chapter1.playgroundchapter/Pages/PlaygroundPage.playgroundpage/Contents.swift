@@ -1,23 +1,15 @@
-//#-hidden-code
-
-import PlaygroundSupport
-import SpriteKit
-
-guard let remoteView = PlaygroundPage.current.liveView as? PlaygroundRemoteLiveViewProxy else {
-    fatalError("Always-on live view not configured in this page's LiveView.swift.")
-}
-
-//#-end-hidden-code
 /*:
+ ## Goal
  
- - Experiment:
- You're gonna help the lymphocites.
- 1. Click on "Run My Code",
- 2. Click on the antygen so the T lymphcytes can identify it,
- 3. The B lymphocytes will produce antibodies to destroy the antygen!
+ Sadly, the antiviral movement has been growing all over the world. Previously eradicated diseases are reappearing in many countries. Misinformation is making people sick. This Playground Book seeks to shed some light on vaccines and undo some myths about it.
+ 
+ ## Why Emojis?
+ 
+ Because they are funny and there are more than 2800 emojis in the Unicode Standard so let's put them to a good use!
+
+  &nbsp;
+ 
  */
-
-//: [Next: How It Works](@next)
-
+//:[Next: Immunization](@next)
 
 

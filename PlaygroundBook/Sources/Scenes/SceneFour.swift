@@ -18,6 +18,8 @@ public class SceneFour: SKScene {
     
     private var filledRange = [PointRange]()
     
+    private var start = false
+    
     override public init(size: CGSize) {
         super.init(size: size)
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
@@ -41,9 +43,6 @@ public class SceneFour: SKScene {
         backgroundColor = UIColor.white
         physicsWorld.contactDelegate = self
         people.enumerated().forEach { (i, person) in
-            if i == 1 {
-                person.infect()
-            }
             entityManager.add(person)
         }
         setValidSpritePosition(entities: people, offset: 100, initialRanges: filledRange)
@@ -83,6 +82,9 @@ public class SceneFour: SKScene {
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if !start { return }
+        
         guard let location = touches.first?.location(in: self) else {
             return
         }
@@ -101,6 +103,7 @@ public class SceneFour: SKScene {
     public func infectPerson(named name: String) {
         guard let person = self.people.first(where: {$0.name == name}) else { return }
         person.infect()
+        self.start = true
     }
     
     public func vacinatePerson(named name: String) {

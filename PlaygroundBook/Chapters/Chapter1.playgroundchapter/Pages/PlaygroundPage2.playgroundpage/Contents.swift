@@ -13,9 +13,7 @@ func start() {
 }
 
 //#-end-hidden-code
-
 /*:
- 
  ## The immune system
  In simple words, our immune system produces several types of cells responsible for defending our body and two of these very important cells are **B lymphocytes** and **T lymphocytes**. T lymphocytes are responsible for identifying intruders, called **antigens**, and then alerting B lymphocytes which produce **antibodies** to each specific antigen.
  
@@ -25,24 +23,22 @@ As some diseases are really dangerous, it is possible to induce the production o
  &nbsp;
  
  - Experiment:
- You're gonna help the lymphocites.
-    1. Click on _Tap to Enter Code_,
-    3. Select **start()** function,
-    2. Click on _Run my code_,
-    3. Click on the antygen 🦠 so the T lymphcytes can identify it,
-    3. The B lymphocytes will produce antibodies 💂‍♂️ to destroy the antygen!
+ You're gonna help the lymphocites:
+    1. Click on _Tap to Enter Code_
+    3. Select **start()** function
+    2. Click on _Run my code_
+    3. Click on the antygen 🦠 so the T lymphcytes can identify it
+    3. The B lymphocytes will produce antibodies 💂‍♂️ to destroy the antygen
  
  &nbsp;
  
  - Note:
     If you're wondering, yes, the pacient it's british. 🇬🇧
- 
 */
 //#-code-completion(everything, hide)
 //#-code-completion(identifier, show, start())
-//#-editable-code Tap to Enter Code
-//#-end-editable-code
-//:[Next: Cracking Myths](@next)
+/*#-editable-code Tap to enter code*//*#-end-editable-code*/
+//:[Next: Undoing Myths](@next)
 
 
 

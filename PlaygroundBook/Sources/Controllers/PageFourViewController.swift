@@ -27,9 +27,6 @@ public class PageFourViewController: UIViewController {
         skView.isUserInteractionEnabled = true
         skView.backgroundColor = UIColor.red
         skView.presentScene(spriteScene)
-        
-        skView.showsPhysics = true
-        
         self.view.addSubview(skView)
     }
     
@@ -54,9 +51,9 @@ extension PageFourViewController: PlaygroundLiveViewMessageHandler, PlaygroundLi
         
         switch action {
         case "infect":
-            spriteScene?.infectPerson(named: target)
+            scene.infectPerson(named: target)
         case "vacinate":
-            spriteScene?.vacinatePerson(named: target)
+            scene.vacinatePerson(named: target)
         default:
             print("nothing")
         }

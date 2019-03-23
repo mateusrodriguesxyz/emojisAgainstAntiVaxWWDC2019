@@ -33,10 +33,6 @@ public class SpriteComponent: GKComponent {
         let spriteRangeX: ClosedRange<CGFloat>  =  minX ... maxX
         let spriteRangeY: ClosedRange<CGFloat>  =  minY ... maxY
         
-        if node.position == CGPoint.zero {
-            print(spriteRangeX, spriteRangeY)
-        }
-        
         return PointRange(rangeX: spriteRangeX, rangeY: spriteRangeY)
     }
     

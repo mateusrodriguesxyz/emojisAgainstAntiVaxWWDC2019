@@ -17,9 +17,6 @@ public class PageThreeViewController: UIViewController {
         let skView = SKView(frame: CGRect(origin: CGPoint.zero, size: view.bounds.size))
         skView.isUserInteractionEnabled = true
         skView.presentScene(spriteScene)
-        
-        skView.showsPhysics = true
-        
         self.view.addSubview(skView)
     }
     
