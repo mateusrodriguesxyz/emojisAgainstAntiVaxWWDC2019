@@ -28,6 +28,27 @@ public class PageThreeViewController: UIViewController {
 extension PageThreeViewController: PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer  {
     public func receive(_ message: PlaygroundValue) {
         
+        guard let scene = spriteScene else { return }
+        
+        guard case let .dictionary(values) = message else {
+            return
+        }
+        
+        guard case let .string(action)? = values["action"] else {
+            return
+        }
+        
+        guard case let .integer(total)? = values["total"] else {
+            return
+        }
+        
+        switch action {
+        case "create":
+            spriteScene?.createEmojis(total)
+        default:
+            return
+        }
+        
     }
 }
 

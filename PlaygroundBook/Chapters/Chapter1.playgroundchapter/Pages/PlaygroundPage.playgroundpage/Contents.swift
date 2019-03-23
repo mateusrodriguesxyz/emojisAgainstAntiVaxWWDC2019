@@ -1,35 +1,23 @@
 //#-hidden-code
 
 import PlaygroundSupport
-import UIKit
 import SpriteKit
-
 
 guard let remoteView = PlaygroundPage.current.liveView as? PlaygroundRemoteLiveViewProxy else {
     fatalError("Always-on live view not configured in this page's LiveView.swift.")
 }
 
-func infect(_ name: String) {
-    let action = PlaygroundValue.string("infect")
-    let target = PlaygroundValue.string(name)
-    let message = PlaygroundValue.dictionary(["action": action, "target": target])
-    remoteView.send(message)
-}
-
-func vacinate(_ name: String) {
-    let action = PlaygroundValue.string("vacinate")
-    let target = PlaygroundValue.string(name)
-    let message = PlaygroundValue.dictionary(["action": action, "target": target])
-    remoteView.send(message)
-}
-
 //#-end-hidden-code
+/*:
+ 
+ - Experiment:
+ You're gonna help the lymphocites.
+ 1. Click on "Run My Code",
+ 2. Click on the antygen so the T lymphcytes can identify it,
+ 3. The B lymphocytes will produce antibodies to destroy the antygen!
 
-var 👩🏻‍🦱 = "jessica"
-var 🧑🏽 = "cibele"
+ [Next: How It Works](@next)
+ 
+ */
 
-//#-code-completion(everything, hide)
-//#-code-completion(identifier, show, 👩🏻‍🦱, 🧑🏽)
 
-infect(/*#-editable-code*/<#T##select a emoji or type a name##String#>/*#-end-editable-code*/)
-vacinate(/*#-editable-code*/<#T##select a emoji or type a name##String#>/*#-end-editable-code*/)

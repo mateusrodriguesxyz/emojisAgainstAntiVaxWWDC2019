@@ -16,7 +16,7 @@ public class SceneOne: SKScene {
     
     private var filledRange = [PointRange]()
     
-    let emojis = ["🧑🏽", "👩🏻‍🦱", "👨🏿‍🦱", "🧔🏼", "🧟", "🧟‍♀️", "😀", "🙂", "😢", "🤢", "🤒", "🦠", "😐", "💂", "💂‍♀️"]
+    let emojis = ["🧑🏽", "👩🏻‍🦱", "👨🏿‍🦱", "🧔🏼", "🧟", "🧟‍♀️", "😀", "🙂", "😢", "🤢", "🤒", "🦠", "😐", "💂", "💂‍♀️", "vaccine", "speak", "tongue"]
     
     override public init(size: CGSize) {
         super.init(size: size)
@@ -53,16 +53,18 @@ public class SceneOne: SKScene {
             return
         }
         
-        let configuration: [(CGFloat, Double)] = [(0.3, 3.0), (0.4, 4.0), (0.5, 5.0)]
+        let configuration: [(CGFloat, CGFloat, Double)] = [(1, 0.3, 3.0), (2, 0.4, 4.0), (3, 0.5, 5.0)]
         
         var nodeCopy: SKNode! = node
         nodeCopy.position.y = frame.maxY + 50
+        
         node.position.x = CGFloat.random(in: PointRange(from: frame).rangeX)
         
-        guard let (scale, duration) = configuration.randomElement() else {
+        guard let (z, scale, duration) = configuration.randomElement() else {
             return
         }
         nodeCopy.setScale(scale)
+        nodeCopy.zPosition = z
         
         let action = SKAction.moveTo(y: frame.minY, duration: duration)
         node.run(action ,completion: {

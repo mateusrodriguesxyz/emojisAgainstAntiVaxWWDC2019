@@ -34,6 +34,6 @@ public class PageOneViewController: UIViewController {
 
 extension PageOneViewController: PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer  {
     public func receive(_ message: PlaygroundValue) {
-        
+        guard let scene = spriteScene else { return }
     }
 }

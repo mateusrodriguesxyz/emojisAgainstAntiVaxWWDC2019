@@ -31,12 +31,12 @@ public class SceneTwo: SKScene {
     override public func didMove(to view: SKView) {
         backgroundColor = UIColor.white
         physicsWorld.contactDelegate = self
-        
+    }
+    
+    public func start() {
         let virus = Virus(entityManager: entityManager)
         virus.spriteComponent.node.position = CGPoint.zero
         entityManager.add(virus)
-
-        
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -59,7 +59,6 @@ public class SceneTwo: SKScene {
         entityManager.add(antibody2)
         entityManager.add(antibody3)
         entityManager.add(antibody4)
-        
     }
     
     override public func update(_ currentTime: TimeInterval) {

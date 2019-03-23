@@ -31,7 +31,7 @@ public class SceneThree: SKScene {
     override public func didMove(to view: SKView) {
         backgroundColor = UIColor.white
         physicsWorld.contactDelegate = self
-        createEmojis(5)
+        //createEmojis(5)
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -70,7 +70,7 @@ public class SceneThree: SKScene {
         entityManager.update(deltaTime)
     }
     
-    func createEmojis(_ total: Int) {
+    public func createEmojis(_ total: Int) {
         var people = [Person]()
         for i in 0 ... total {
             let person = Person(entityManager: entityManager, name: "smile\(i)", gender: .male, emoji: "😐")

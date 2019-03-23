@@ -12,13 +12,6 @@ import PlaygroundSupport
 
 public class PageFourViewController: UIViewController {
     
-    public let resultLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: label.font.fontName, size: 100)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
     public var spriteScene: SceneFour?
     
     public override func viewDidLoad() {
@@ -48,17 +41,14 @@ extension PageFourViewController: PlaygroundLiveViewMessageHandler, PlaygroundLi
         guard let scene = spriteScene else { return }
         
         guard case let .dictionary(values) = message else {
-            scene.logLabel.text = "Dictionary not available"
             return
         }
         
         guard case let .string(action)? = values["action"] else {
-            scene.logLabel.text = "Action not found"
             return
         }
         
         guard case let .string(target)? = values["target"] else {
-            scene.logLabel.text = "Target not found"
             return
         }
         

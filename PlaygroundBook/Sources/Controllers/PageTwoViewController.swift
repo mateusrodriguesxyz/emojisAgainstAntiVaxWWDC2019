@@ -28,12 +28,22 @@ public class PageTwoViewController: UIViewController {
         skView.showsPhysics = true
         
         self.view.addSubview(skView)
+        
     }
     
 }
 
 extension PageTwoViewController: PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer  {
     public func receive(_ message: PlaygroundValue) {
+        
+        guard let scene = spriteScene else { return }
+        
+        switch message {
+        case .string("start"):
+            scene.start()
+        default:
+            return
+        }
         
     }
 }
