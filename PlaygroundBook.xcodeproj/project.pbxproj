@@ -52,8 +52,6 @@
 		DC3C35092242DFFB00DCC8B7 /* tongue.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C34F92242DFFB00DCC8B7 /* tongue.png */; };
 		DC3C350C2242DFFB00DCC8B7 /* 🧑🏽.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C34FB2242DFFB00DCC8B7 /* 🧑🏽.png */; };
 		DC3C350D2242DFFB00DCC8B7 /* 🧑🏽.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C34FB2242DFFB00DCC8B7 /* 🧑🏽.png */; };
-		DC3C35152243B9D500DCC8B7 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C35142243B9D500DCC8B7 /* cover.png */; };
-		DC3C35162243B9D500DCC8B7 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C35142243B9D500DCC8B7 /* cover.png */; };
 		DC3C351B2243C2D700DCC8B7 /* speak.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C351A2243C2D700DCC8B7 /* speak.png */; };
 		DC3C351C2243C2D700DCC8B7 /* speak.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C351A2243C2D700DCC8B7 /* speak.png */; };
 		DC3C35242243F2A800DCC8B7 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C35232243F2A800DCC8B7 /* Controller.swift */; };
@@ -96,6 +94,8 @@
 		DCBD72FA22467321004F9097 /* PageFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD72F922467321004F9097 /* PageFiveViewController.swift */; };
 		DCD34FDB224674780091C419 /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCD34FDA224674780091C419 /* photo.jpg */; };
 		DCD34FDC224674780091C419 /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCD34FDA224674780091C419 /* photo.jpg */; };
+		DCD34FE12246C6540091C419 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD34FE02246C6530091C419 /* cover.png */; };
+		DCD34FE22246C6540091C419 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD34FE02246C6530091C419 /* cover.png */; };
 		DCEF48DF223D624B00ADDE77 /* SceneFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48DE223D624B00ADDE77 /* SceneFour.swift */; };
 		DCEF48E5223D642800ADDE77 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48E4223D642800ADDE77 /* Person.swift */; };
 		DCEF48E6223D642800ADDE77 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48E4223D642800ADDE77 /* Person.swift */; };
@@ -211,7 +211,6 @@
 		DC3C34F82242DFFB00DCC8B7 /* 🧟.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "🧟.png"; sourceTree = "<group>"; };
 		DC3C34F92242DFFB00DCC8B7 /* tongue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tongue.png; sourceTree = "<group>"; };
 		DC3C34FB2242DFFB00DCC8B7 /* 🧑🏽.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "🧑🏽.png"; sourceTree = "<group>"; };
-		DC3C35142243B9D500DCC8B7 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
 		DC3C351A2243C2D700DCC8B7 /* speak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speak.png; sourceTree = "<group>"; };
 		DC3C351F2243C55400DCC8B7 /* PageThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageThreeViewController.swift; sourceTree = "<group>"; };
 		DC3C35212243C5A200DCC8B7 /* SceneThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneThree.swift; sourceTree = "<group>"; };
@@ -239,6 +238,7 @@
 		DC4F20BE2245286B00439F50 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		DCBD72F922467321004F9097 /* PageFiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageFiveViewController.swift; sourceTree = "<group>"; };
 		DCD34FDA224674780091C419 /* photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo.jpg; sourceTree = "<group>"; };
+		DCD34FE02246C6530091C419 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
 		DCEF48DE223D624B00ADDE77 /* SceneFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFour.swift; sourceTree = "<group>"; };
 		DCEF48E4223D642800ADDE77 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		DCEF48E8223D64A900ADDE77 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
@@ -451,7 +451,7 @@
 				DC4F20AF2245198F00439F50 /* vaccine.png */,
 				DC3C351A2243C2D700DCC8B7 /* speak.png */,
 				DC3C34F92242DFFB00DCC8B7 /* tongue.png */,
-				DC3C35142243B9D500DCC8B7 /* cover.png */,
+				DCD34FE02246C6530091C419 /* cover.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -600,10 +600,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC4F20B22245199700439F50 /* 💂‍♀️.png in Resources */,
+				DCD34FE12246C6540091C419 /* cover.png in Resources */,
 				DC3C352B2244175F00DCC8B7 /* 🤢.png in Resources */,
 				DC3C35022242DFFB00DCC8B7 /* 👨🏿‍🦱.png in Resources */,
 				5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */,
-				DC3C35152243B9D500DCC8B7 /* cover.png in Resources */,
 				DC3C35342244189C00DCC8B7 /* 😀.png in Resources */,
 				DC3C35002242DFFB00DCC8B7 /* 🧟‍♀️.png in Resources */,
 				DC3C352D2244175F00DCC8B7 /* 🤒.png in Resources */,
@@ -630,9 +630,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC3C352C2244175F00DCC8B7 /* 🤢.png in Resources */,
+				DCD34FE22246C6540091C419 /* cover.png in Resources */,
 				DC3C35032242DFFB00DCC8B7 /* 👨🏿‍🦱.png in Resources */,
 				5EA2E3CA2056F35B00416A35 /* LiveViewTestAppLaunchScreen.storyboard in Resources */,
-				DC3C35162243B9D500DCC8B7 /* cover.png in Resources */,
 				DC3C35352244189C00DCC8B7 /* 😀.png in Resources */,
 				DC3C35012242DFFB00DCC8B7 /* 🧟‍♀️.png in Resources */,
 				DC3C352E2244175F00DCC8B7 /* 🤒.png in Resources */,
