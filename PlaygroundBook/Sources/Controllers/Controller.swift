@@ -12,4 +12,5 @@ public enum Controller {
     case two
     case three
     case four
+    case five
 }

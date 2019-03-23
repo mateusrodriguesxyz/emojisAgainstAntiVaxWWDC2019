@@ -15,9 +15,9 @@ guard let remoteView = PlaygroundPage.current.liveView as? PlaygroundRemoteLiveV
  1. Click on "Run My Code",
  2. Click on the antygen so the T lymphcytes can identify it,
  3. The B lymphocytes will produce antibodies to destroy the antygen!
-
- [Next: How It Works](@next)
- 
  */
+
+//: [Next: How It Works](@next)
+
 
 

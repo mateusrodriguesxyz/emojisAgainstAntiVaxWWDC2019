@@ -72,7 +72,7 @@ public class SceneThree: SKScene {
     
     public func createEmojis(_ total: Int) {
         var people = [Person]()
-        for i in 0 ... total {
+        for i in 1 ... total {
             let person = Person(entityManager: entityManager, name: "smile\(i)", gender: .male, emoji: "😐")
             person.humanComponent.wander = true
             people.append(person)

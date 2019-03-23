@@ -16,21 +16,11 @@ public class SceneFour: SKScene {
     
     private var people: [Person] = []
     
-    lazy var logLabel: SKLabelNode = {
-        let label = SKLabelNode(text: "Log")
-        label.fontColor = UIColor.black
-        label.fontSize = 25
-        label.position = CGPoint(x: self.frame.minX + label.frame.width/2 + 5,
-                                 y: self.frame.maxY - 25)
-        return label
-    }()
-    
     private var filledRange = [PointRange]()
     
     override public init(size: CGSize) {
         super.init(size: size)
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        addChild(logLabel)
         entityManager = EntityManager(scene: self)
         
         self.people = [Person(entityManager: entityManager, name: "cibele", gender: .female, emoji: "🧑🏽"),

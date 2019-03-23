@@ -15,20 +15,32 @@ func infect(_ name: String) {
     remoteView.send(message)
 }
 
-func vacinate(_ name: String) {
-    let action = PlaygroundValue.string("vacinate")
-    let target = PlaygroundValue.string(name)
-    let message = PlaygroundValue.dictionary(["action": action, "target": target])
-    remoteView.send(message)
-}
-
 //#-end-hidden-code
 
 var 👩🏻‍🦱 = "jessica"
 var 🧑🏽 = "cibele"
 
+/*:
+ 
+ ## Avoiding the Apocalipse
+ 
+ - Experiment:
+ You're gonna help to avoid the spread of a zombie virus!
+ 1. Click on _Tap to Enter Code_,
+ 2. Select **infect()** function,
+ 3. Enter the name or emoji of a person,
+ 4. Click on _Run My Code_,
+ 5. Click on emojis to vaccinate them and stop the virus to spread
+ 
+ &nbsp;
+ 
+ - Note:
+ Some may cry a little or get a little sick but in the end everyone will be healthy and happy. 😀
+ 
+ */
 //#-code-completion(everything, hide)
-//#-code-completion(identifier, show, 👩🏻‍🦱, 🧑🏽)
+//#-code-completion(identifier, show, infect(), 👩🏻‍🦱, 🧑🏽)
+//#-editable-code Tap to enter code
+//#-end-editable-code
+//:[Next: About Me](@next)
 
-infect("jessica")
-vacinate("cibele")

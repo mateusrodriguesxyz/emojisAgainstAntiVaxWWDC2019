@@ -24,6 +24,8 @@ public func instantiateLiveView(_ controller: Controller) -> PlaygroundLiveViewa
             liveView = PageThreeViewController()
         case .four:
             liveView = PageFourViewController()
+        case .five:
+            liveView = PageFiveViewController()
     }
     
     return liveView

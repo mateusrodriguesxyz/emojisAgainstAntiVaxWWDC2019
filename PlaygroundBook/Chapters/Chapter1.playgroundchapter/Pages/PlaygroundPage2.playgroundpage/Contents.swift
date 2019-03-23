@@ -8,7 +8,7 @@ guard let remoteView = PlaygroundPage.current.liveView as? PlaygroundRemoteLiveV
 }
 
 func start() {
-    let message = .string("start")
+    let message: PlaygroundValue = .integer(1)
     remoteView.send(message)
 }
 
@@ -26,21 +26,22 @@ As some diseases are really dangerous, it is possible to induce the production o
  
  - Experiment:
  You're gonna help the lymphocites.
-     1. Click on "Run My Code",
-     2. Click on the antygen 🦠 so the T lymphcytes can identify it,
-     3. The B lymphocytes will produce antibodies 💂‍♂️ to destroy the antygen!
+    1. Click on _Tap to Enter Code_,
+    3. Select **start()** function,
+    2. Click on _Run my code_,
+    3. Click on the antygen 🦠 so the T lymphcytes can identify it,
+    3. The B lymphocytes will produce antibodies 💂‍♂️ to destroy the antygen!
  
  &nbsp;
  
- - Callout(Fun Fact):
+ - Note:
     If you're wondering, yes, the pacient it's british. 🇬🇧
  
- &nbsp;
- 
 */
-
-start()
-
+//#-code-completion(everything, hide)
+//#-code-completion(identifier, show, start())
+//#-editable-code Tap to Enter Code
+//#-end-editable-code
 //:[Next: Cracking Myths](@next)
 
 

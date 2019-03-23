@@ -28,7 +28,6 @@ public class PageTwoViewController: UIViewController {
         skView.showsPhysics = true
         
         self.view.addSubview(skView)
-        
     }
     
 }
@@ -39,7 +38,7 @@ extension PageTwoViewController: PlaygroundLiveViewMessageHandler, PlaygroundLiv
         guard let scene = spriteScene else { return }
         
         switch message {
-        case .string("start"):
+        case .integer(1):
             scene.start()
         default:
             return
