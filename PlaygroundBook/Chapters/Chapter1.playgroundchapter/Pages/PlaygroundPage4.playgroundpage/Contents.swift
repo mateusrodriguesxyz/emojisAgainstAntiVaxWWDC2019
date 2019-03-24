@@ -37,10 +37,10 @@ func infect(_ name: String) {
  */
 
 var 👩🏻‍🦱 = "jessica"
-var 🧑🏽 = "cibele"
+var 🧔🏼 = "thalys"
 
 //#-code-completion(everything, hide)
-//#-code-completion(identifier, show, infect(_:), 👩🏻‍🦱, 🧑🏽)
+//#-code-completion(identifier, show, infect(_:), 👩🏻‍🦱, 🧔🏼)
 /*#-editable-code Tap to enter code*//*#-end-editable-code*/
 //:[Next: About Me / References](@next)
 

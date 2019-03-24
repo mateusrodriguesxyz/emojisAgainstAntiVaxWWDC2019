@@ -73,6 +73,16 @@ public class ZombieComponent: GKAgent2D, GKAgentDelegate {
             let wander = GKGoal(toWander: 10)
             let stop = GKGoal(toReachTargetSpeed: 0)
             self.behavior = GKBehavior(goals: [wander, stop], andWeights: [100, 1])
+            
+            let humans = entityManager.getComponents(type: HumanComponent.self)
+            let zombies = entityManager.getComponents(type: ZombieComponent.self)
+            
+            let result = zombies.count > humans.count ? true: false
+            
+            if let scene = entityManager.scene as? SceneFour {
+                scene.apocalipse(result)
+            }
+            
             return
         }
         let seek = GKGoal(toSeekAgent: target)

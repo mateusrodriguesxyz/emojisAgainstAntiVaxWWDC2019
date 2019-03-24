@@ -16,6 +16,14 @@ public class SceneTwo: SKScene {
     
     private var filledRange = [PointRange]()
     
+    lazy var loading: SKSpriteNode = {
+        let loading = SKSpriteNode(imageNamed: "🙂")
+        loading.alpha = 0.25
+        loading.setScale(0.75)
+        loading.position = CGPoint.zero
+        return loading
+    }()
+    
     override public init(size: CGSize) {
         super.init(size: size)
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
@@ -31,12 +39,18 @@ public class SceneTwo: SKScene {
     override public func didMove(to view: SKView) {
         backgroundColor = UIColor.white
         physicsWorld.contactDelegate = self
+        addChild(loading)
+        loading.run(SKAction.repeatForever(SKAction.rotate(byAngle: -0.25, duration: 0.25)))
     }
     
     public func start() {
-        let virus = Virus(entityManager: entityManager)
-        virus.spriteComponent.node.position = CGPoint.zero
-        entityManager.add(virus)
+        loading.run(SKAction.fadeOut(withDuration: 0.5)) { [unowned self] in
+            self.loading.removeAllActions()
+            self.loading.removeFromParent()
+            let virus = Virus(entityManager: self.entityManager)
+            virus.spriteComponent.node.position = CGPoint.zero
+            self.entityManager.add(virus)
+        }
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

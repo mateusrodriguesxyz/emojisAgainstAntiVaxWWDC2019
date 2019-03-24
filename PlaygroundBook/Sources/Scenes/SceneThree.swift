@@ -16,6 +16,14 @@ public class SceneThree: SKScene {
     
     private var filledRange = [PointRange]()
     
+    lazy var loading: SKSpriteNode = {
+        let loading = SKSpriteNode(imageNamed: "🙂")
+        loading.alpha = 0.25
+        loading.setScale(0.75)
+        loading.position = CGPoint.zero
+        return loading
+    }()
+    
     override public init(size: CGSize) {
         super.init(size: size)
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
@@ -31,7 +39,8 @@ public class SceneThree: SKScene {
     override public func didMove(to view: SKView) {
         backgroundColor = UIColor.white
         physicsWorld.contactDelegate = self
-        //createEmojis(5)
+        addChild(loading)
+        loading.run(SKAction.repeatForever(SKAction.rotate(byAngle: -0.25, duration: 0.25)))
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -71,14 +80,18 @@ public class SceneThree: SKScene {
     }
     
     public func createEmojis(_ total: Int) {
-        var people = [Person]()
-        for i in 1 ... total {
-            let person = Person(entityManager: entityManager, name: "smile\(i)", gender: .male, emoji: "😐")
-            person.humanComponent.wander = true
-            people.append(person)
-            entityManager.add(person)
+        loading.run(SKAction.fadeOut(withDuration: 0.5)) { [unowned self] in
+            self.loading.removeAllActions()
+            self.loading.removeFromParent()
+            var people = [Person]()
+            for i in 1 ... total {
+                let person = Person(entityManager: self.entityManager, name: "smile\(i)", gender: .male, emoji: "😐")
+                person.humanComponent.wander = true
+                people.append(person)
+                self.entityManager.add(person)
+            }
+            self.setValidSpritePosition(entities: people, offset: 50, initialRanges: self.filledRange)
         }
-        setValidSpritePosition(entities: people, offset: 100, initialRanges: filledRange)
     }
     
     private func setValidSpritePosition(entities: [GKEntity], offset: CGFloat, initialRanges: [PointRange]) {
@@ -94,7 +107,7 @@ public class SceneThree: SKScene {
             var position = lastPosition
             
             while self.checkPositionInRange(position: position, ranges: ranges) {
-                position = CGPoint.random(for: scene!.frame, offset: 50)
+                position = CGPoint.random(for: scene!.frame, offset: 0)
             }
             
             node.position = position

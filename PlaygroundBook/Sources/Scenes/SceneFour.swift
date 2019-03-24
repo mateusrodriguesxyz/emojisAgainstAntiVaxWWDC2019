@@ -18,6 +18,16 @@ public class SceneFour: SKScene {
     
     private var filledRange = [PointRange]()
     
+    lazy var resultLabel: SKLabelNode = {
+        let label = SKLabelNode(text: "RESULT")
+        label.fontName = "AvenirNext-Bold"
+        label.fontColor = UIColor.darkGray
+        label.position = CGPoint.zero
+        label.zPosition = 10
+        label.alpha = 0
+        return label
+    }()
+    
     private var start = false
     
     override public init(size: CGSize) {
@@ -26,10 +36,10 @@ public class SceneFour: SKScene {
         entityManager = EntityManager(scene: self)
         
         self.people = [Person(entityManager: entityManager, name: "cibele", gender: .female, emoji: "🧑🏽"),
-                       Person(entityManager: entityManager, name: "", gender: .male, emoji: "👨🏼‍🦰"),
+                       Person(entityManager: entityManager, name: "daniel", gender: .male, emoji: "👨🏼‍🦰"),
                        Person(entityManager: entityManager, name: "jessica", gender: .female, emoji: "👩🏻‍🦱"),
-                       Person(entityManager: entityManager, name: "4", gender: .male, emoji: "👨🏿‍🦱"),
-                       Person(entityManager: entityManager, name: "5", gender: .male, emoji: "🧔🏼")]
+                       Person(entityManager: entityManager, name: "alan", gender: .male, emoji: "👨🏿‍🦱"),
+                       Person(entityManager: entityManager, name: "thalys", gender: .male, emoji: "🧔🏼")]
         
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
         
@@ -42,10 +52,23 @@ public class SceneFour: SKScene {
     override public func didMove(to view: SKView) {
         backgroundColor = UIColor.white
         physicsWorld.contactDelegate = self
+        addChild(resultLabel)
+        
         people.enumerated().forEach { (i, person) in
             entityManager.add(person)
         }
+        
         setValidSpritePosition(entities: people, offset: 100, initialRanges: filledRange)
+    }
+    
+    public func apocalipse(_ result: Bool){
+        self.children.forEach {$0.alpha = 0.25}
+        resultLabel.alpha = 1
+        if result == true {
+            resultLabel.text = "ZOMBIE APOCALIPSE!"
+        } else {
+            resultLabel.text = "YOU STOPPED THE VIRUS!"
+        }
     }
     
     private func setValidSpritePosition(entities: [GKEntity], offset: CGFloat, initialRanges: [PointRange]) {

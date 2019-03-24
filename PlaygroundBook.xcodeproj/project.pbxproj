@@ -96,6 +96,7 @@
 		DCD34FDC224674780091C419 /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCD34FDA224674780091C419 /* photo.jpg */; };
 		DCD34FE12246C6540091C419 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD34FE02246C6530091C419 /* cover.png */; };
 		DCD34FE22246C6540091C419 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD34FE02246C6530091C419 /* cover.png */; };
+		DCD34FE32246E4320091C419 /* SceneFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48DE223D624B00ADDE77 /* SceneFour.swift */; };
 		DCEF48DF223D624B00ADDE77 /* SceneFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48DE223D624B00ADDE77 /* SceneFour.swift */; };
 		DCEF48E5223D642800ADDE77 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48E4223D642800ADDE77 /* Person.swift */; };
 		DCEF48E6223D642800ADDE77 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF48E4223D642800ADDE77 /* Person.swift */; };
@@ -691,6 +692,7 @@
 				DC3C34E622411ECE00DCC8B7 /* ZombieComponent.swift in Sources */,
 				DC4F20BB22451B3E00439F50 /* Gender.swift in Sources */,
 				DC3C34E722411EFC00DCC8B7 /* EntityManager.swift in Sources */,
+				DCD34FE32246E4320091C419 /* SceneFour.swift in Sources */,
 				DCEF48E6223D642800ADDE77 /* Person.swift in Sources */,
 				DC3C353722442AC300DCC8B7 /* Reaction.swift in Sources */,
 				DC3C34EE224293CD00DCC8B7 /* CategoryMask.swift in Sources */,

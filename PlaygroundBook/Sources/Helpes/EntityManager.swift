@@ -10,7 +10,7 @@ import GameplayKit
 
 public class EntityManager {
     
-    private let scene: SKScene
+    public let scene: SKScene
     private var entities: Set<GKEntity>
     
     init(scene: SKScene) {
@@ -43,10 +43,8 @@ public class EntityManager {
         node.run(SKAction.fadeOut(withDuration: 0.5)) {
             node.removeFromParent()
         }
-        
         entities.remove(entity)
     }
-    
     
     func update(_ deltaTime: CFTimeInterval) {
         entities.forEach { (entity) in
